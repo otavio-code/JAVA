@@ -1,7 +1,3 @@
-/*Crie uma classe "Conta Bancária" que tenha
- como atributos o número da conta,
-  o nome do titular, o saldo, a agência e o tipo de conta,
-   e como métodos saque e depósito.*/
 public class Main {
     public static void main(String[] args) {
 
@@ -16,7 +12,7 @@ public class Main {
         System.out.println("Agencia: " + contabancaria.agencia);
         System.out.println("Conta: " + contabancaria.conta);
         System.out.println("Tipo de Conta: " + contabancaria.tipo_conta);
-        System.out.println("Saque: " + contabancaria.saque(399));
-        System.out.println("Deposito: " + contabancaria.deposito(400));
+        System.out.println("Saque: " + contabancaria.saque(20000));
+        System.out.println("Deposito: " + contabancaria.deposito(0));
     }
 }
