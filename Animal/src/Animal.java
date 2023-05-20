@@ -11,7 +11,7 @@ public class Animal {
         }else if(especie == "Gato"){
             return ("Este animal faz este som: MiauMiauMiau");
         }else{
-            return ("Espécie informada inválida");
+            return ("Espécie informada é inválida");
         }
     }
 }
