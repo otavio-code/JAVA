@@ -4,10 +4,14 @@ public class Animal {
     String especie;
     String habitat;
 
-    String som;
-
-    public String Som(String som){
-        this.som = som;
-        return ("Este animal faz: " + som);
+    public String Som(String especie){
+        this.especie = especie;
+        if(especie == "Cachorro"){
+            return ("Este animal faz este som: AuAuAuAuAu");
+        }else if(especie == "Gato"){
+            return ("Este animal faz este som: MiauMiauMiau");
+        }else{
+            return ("Espécie informada inválida");
+        }
     }
 }

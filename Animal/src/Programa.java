@@ -6,14 +6,12 @@ public class Programa {
         animal.especie = "Cachorro";
         animal.habitat = "Do lar";
         animal.idade = 4;
-        String som;
-        som = "AuAuAuAu";
 
         System.out.println("Nome: " + animal.nome);
         System.out.println("Espécie: " + animal.especie);
         System.out.println("Habitat: " + animal.habitat);
         System.out.println("Idade: " + animal.idade);
-        System.out.println(animal.Som(som));
+        System.out.println(animal.Som(animal.especie));
 
     }
 }
