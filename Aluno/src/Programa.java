@@ -1,34 +1,16 @@
 public class Programa {
-    public static void main(String[] args) {
+    public static void main(String[] arg){
+        int i;
+        Aluno aluno = new Aluno();
+        MediaTurma mediaTurma = new MediaTurma();
 
-        Turma java = new Turma();
+        for (i=0;i<mediaTurma.nota.length;i++){
+            aluno.entraNotas();
+            mediaTurma.nota[i] = aluno.mediaAluno();
+            System.out.printf("NOME DO ALUNO: %s\nNOME DA DISCIPLINA: %s\nNOTA FINAL: %.2f",aluno.nome,aluno.disciplina,aluno.notaFinal);
+        }
 
-
-        Aluno alunoUm = new Aluno();
-        alunoUm.nome = "Leandro";
-        alunoUm.disciplina = "Java";
-        alunoUm.atribuirNotas();
-
-        Aluno alunoDois = new Aluno();
-        alunoDois.nome = "Otávio";
-        alunoDois.disciplina = "Java";
-        alunoDois.atribuirNotas();
-
-        Aluno alunoTres = new Aluno();
-        alunoTres.nome = "Neide";
-        alunoTres.disciplina = "Java";
-        alunoTres.atribuirNotas();
-
-        System.out.printf("MEDIA do aluno 1: %.2f \n", alunoUm.calculaMedia());
-        System.out.printf("MEDIA do aluno 2: %.2f \n", alunoDois.calculaMedia());
-        System.out.printf("MEDIA do aluno 3: %.2f \n", alunoTres.calculaMedia());
-
-        java.turmas[0] = alunoUm;
-        java.turmas[1] = alunoDois;
-        java.turmas[2] = alunoTres;
-
-        System.out.printf("A MEDIA DA TURMA FOI: %.2f \n", java.calcularMediaDaTurma());
-
-
+        mediaTurma.notaFinal();
+        System.out.printf("\nNOTA DA TURMA: %.2f",mediaTurma.media);
     }
 }
