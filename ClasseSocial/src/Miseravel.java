@@ -1,2 +1,5 @@
-package PACKAGE_NAME;public class Miseravel {
+public class Miseravel extends Pessoa{
+    public String mendiga(){
+        return "O miseravel mendiga";
+    }
 }

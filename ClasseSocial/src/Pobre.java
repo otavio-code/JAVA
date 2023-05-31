@@ -1,2 +1,5 @@
-package PACKAGE_NAME;public class Pobre {
+public class Pobre extends Pessoa{
+    public String trabalha(){
+        return "O pobre trabalha";
+    }
 }
