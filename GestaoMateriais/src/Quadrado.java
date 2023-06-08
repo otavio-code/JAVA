@@ -1,8 +1,15 @@
-public class Quadrado{
+public class Quadrado extends GestaoMateriais{
     private double lado;
     private String material;
     private double PesoEspecifico;
     private double valorKilo;
+
+    public Quadrado(double lado, String material, double pesoEspecifico, double valorKilo) {
+        this.lado = lado;
+        this.material = material;
+        PesoEspecifico = pesoEspecifico;
+        this.valorKilo = valorKilo;
+    }
 
     public String getMaterial() {
         return material;
@@ -50,5 +57,14 @@ public class Quadrado{
 
     public double getCusto(){
         return getPeso() * getValorKilo();
+    }
+
+    public void exibirDetalhes() {
+        System.out.println("Lado: " + getLado());
+        System.out.println("Material: " + getMaterial());
+        System.out.println("Peso Específico: " + getPesoEspecifico());
+        System.out.println("Valor Kilo: " + area());
+        System.out.println("Volume: " + getVolume());
+        System.out.println("Peso: " + getPeso());
     }
 }
