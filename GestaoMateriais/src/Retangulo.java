@@ -6,7 +6,8 @@ public class Retangulo extends GestaoMateriais{
     private double PesoEspecifico;
     private double valorKilo;
 
-    public Retangulo(double base, double altura, double comprimento, String material, double pesoEspecifico, double valorKilo) {
+    public Retangulo(int id, double base, double altura, double comprimento, String material, double pesoEspecifico, double valorKilo) {
+        setId(id);
         this.base = base;
         this.altura = altura;
         this.comprimento = comprimento;
@@ -79,15 +80,14 @@ public class Retangulo extends GestaoMateriais{
         return getPeso() * getValorKilo();
     }
 
-    public void exibirDetalhes() {
-        System.out.println("Base: " + getBase());
-        System.out.println("Altura: " + getAltura());
-        System.out.println("Comprimento: " + getComprimento());
-        System.out.println("Material: " + getMaterial());
-        System.out.println("Peso Específico: " + getPesoEspecifico());
-        System.out.println("Valor Kilo: " + area());
-        System.out.println("Volume: " + getVolume());
-        System.out.println("Peso: " + getPeso());
+    public String toString() {
+        return "Retangulo{" +
+                "base=" + base +
+                ", altura=" + altura +
+                ", comprimento=" + comprimento +
+                ", material='" + material + '\'' +
+                ", pesoEspecifico=" + PesoEspecifico +
+                ", valorKilo=" + valorKilo +
+                '}';
     }
-
 }

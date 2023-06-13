@@ -5,7 +5,8 @@ public class Circulo extends GestaoMateriais{
     private double PesoEspecifico;
     private double valorKilo;
 
-    public Circulo(double raio, double comprimento, String material, double pesoEspecifico, double valorKilo) {
+    public Circulo(int id,double raio, double comprimento, String material, double pesoEspecifico, double valorKilo) {
+        setId(id);
         this.raio = raio;
         this.comprimento = comprimento;
         this.material = material;
@@ -68,13 +69,13 @@ public class Circulo extends GestaoMateriais{
     public double getCusto(){
         return getPeso() * getValorKilo();
     }
-    public void exibirDetalhes() {
-        System.out.println("Raio: " + getRaio());
-        System.out.println("Comprimento: " + getComprimento());
-        System.out.println("Material: " + getMaterial());
-        System.out.println("Peso Específico: " + getPesoEspecifico());
-        System.out.println("Valor Kilo: " + area());
-        System.out.println("Volume: " + getVolume());
-        System.out.println("Peso: " + getPeso());
+    public String toString() {
+        return "Circulo{" +
+                "raio=" + raio +
+                ", comprimento=" + comprimento +
+                ", material='" + material + '\'' +
+                ", pesoEspecifico=" + PesoEspecifico +
+                ", valorKilo=" + valorKilo +
+                '}';
     }
 }

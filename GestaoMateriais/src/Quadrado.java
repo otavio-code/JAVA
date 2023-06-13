@@ -4,27 +4,16 @@ public class Quadrado extends GestaoMateriais{
     private double PesoEspecifico;
     private double valorKilo;
 
-    public Quadrado(double lado, String material, double pesoEspecifico, double valorKilo) {
+    public Quadrado(int id, double lado, String material, double PesoEspecifico, double valorKilo) {
+        setId(id);
         this.lado = lado;
         this.material = material;
-        PesoEspecifico = pesoEspecifico;
+        this.PesoEspecifico = PesoEspecifico;
         this.valorKilo = valorKilo;
-    }
-
-    public String getMaterial() {
-        return material;
-    }
-
-    public void setMaterial(String material) {
-        this.material = material;
     }
 
     public double getPesoEspecifico() {
         return PesoEspecifico;
-    }
-
-    public void setPesoEspecifico(double pesoEspecifico) {
-        PesoEspecifico = pesoEspecifico;
     }
 
     public double getValorKilo() {
@@ -43,10 +32,6 @@ public class Quadrado extends GestaoMateriais{
         this.lado = lado;
     }
 
-    public double area() {
-        return Math.pow(getLado(), 2);
-    }
-
     public double getVolume() {
         return Math.pow(getLado(), 3);
     }
@@ -59,12 +44,12 @@ public class Quadrado extends GestaoMateriais{
         return getPeso() * getValorKilo();
     }
 
-    public void exibirDetalhes() {
-        System.out.println("Lado: " + getLado());
-        System.out.println("Material: " + getMaterial());
-        System.out.println("Peso Específico: " + getPesoEspecifico());
-        System.out.println("Valor Kilo: " + area());
-        System.out.println("Volume: " + getVolume());
-        System.out.println("Peso: " + getPeso());
+    public String toString() {
+        return "Quadrado{" +
+                "lado=" + lado +
+                ", material='" + material + '\'' +
+                ", pesoEspecifico=" + PesoEspecifico +
+                ", valorKilo=" + valorKilo +
+                '}';
     }
 }
