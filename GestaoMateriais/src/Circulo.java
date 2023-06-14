@@ -69,6 +69,9 @@ public class Circulo extends GestaoMateriais{
     public double getCusto(){
         return getPeso() * getValorKilo();
     }
+    public double calcularCusto() {
+        return getCusto();
+    }
     public String toString() {
         return "Circulo{" +
                 "raio=" + raio +

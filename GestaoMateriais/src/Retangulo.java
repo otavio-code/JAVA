@@ -79,6 +79,9 @@ public class Retangulo extends GestaoMateriais{
     public double getCusto(){
         return getPeso() * getValorKilo();
     }
+    public double calcularCusto() {
+        return getCusto();
+    }
 
     public String toString() {
         return "Retangulo{" +

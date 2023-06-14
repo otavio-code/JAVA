@@ -12,4 +12,5 @@ public abstract class GestaoMateriais {
     public abstract double getPeso();
     public abstract double getCusto();
     public abstract String toString();
+    public abstract double calcularCusto();
 }
